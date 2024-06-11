@@ -1,0 +1,57 @@
+/* Estilo base */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Configurar el body como un grid */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Estilo para las áreas del grid */
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1em;
+}
+
+.main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Estilo para el canvas de p5.js */
+.myCanvas {
+    border: 1px solid #333;
+    display: block;
+    margin: 0 auto;
+}
